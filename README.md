@@ -25,3 +25,5 @@ http://localhost:8080/index.html
 
 This will produce a list of target points on the runway at East Fortune. Moving either end of the slider control in the top right of the screen should change the number of displayed points.
 
+The link http://localhost:8080/index2.html shows a couple of points with a marked dwell area.
+

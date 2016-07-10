@@ -1,27 +1,25 @@
 ## Setup
 
+It is necessary to have Erlang installed in (tested with v18) order to run this application.
+
 Fetch dependencies:
 ```
 ./rebar get-deps
 
 ```
-
 Compile
 ```
 ./rebar compile
 ```
-
 Start shell/application
 ```
 ./rebar shell
 ```
-
 In the Erlang shell, switch to the htdocs folder and start the web server:
 ```
 1> cd("htdocs").
 2> mapview:start(8080).
 ```
-
 In a web broswer, the following link should now work:
 http://localhost:8080/index.html
 

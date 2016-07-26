@@ -17,9 +17,13 @@ start(Port) ->
     % Number of parallel processes to accept HTTP connections.
     N_acceptors = 10,
 
-    Dispatch = cowboy_router:compile([
-        {'_', [{'_', mapview, []}]}]),
+    %Dispatch = cowboy_router:compile([
+    %    {'_', [{'_', mapview, []}]}]),
 
+    Dispatch = cowboy_router:compile([
+        {'_', [{"/upload", upload_handler, []},
+               {'_', mapview, []}]}]),
+    
     % Start the web server.
     cowboy:start_http(
         mapview, 
